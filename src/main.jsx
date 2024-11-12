@@ -10,6 +10,7 @@ import {
 import Favorites from './pages/favorites/Favorites.jsx';
 import Detail from './pages/details/Detail.jsx';
 import Home from './pages/home/Home.jsx';
+import GlobalState from './context/Context.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
         element: <Favorites />,
       },
       {
-        path: "/detail",
+        path: "/receipe-item/:id",
         element: <Detail />,
       },
     ]
@@ -34,6 +35,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <GlobalState>
     <RouterProvider router={router} />
+    </GlobalState>
   </StrictMode>,
 )
