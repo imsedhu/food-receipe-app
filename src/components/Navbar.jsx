@@ -5,7 +5,7 @@ import { GlobalContext } from "../context/Context";
 
 const Navbar = () => {
 
-  const {searchParam, setSearchParam} = useContext(GlobalContext);
+  const {searchParam, setSearchParam, handleSubmit} = useContext(GlobalContext);
 
   console.log(searchParam)
   return (
@@ -13,10 +13,10 @@ const Navbar = () => {
       <h2 className="text-2xl font-semibold">
         <Link to={"/"}>Food Receipe</Link>
       </h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           value={searchParam}
-          onChange={(e)=> {setSearchParam(e.target.value)}}
+          onChange={(event)=> {setSearchParam(event.target.value)}}
           type="text"
           name="text"
           id="text"
