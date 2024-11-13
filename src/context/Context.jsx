@@ -20,8 +20,8 @@ export default function GlobalState({children}){
         setLoading(false);
         setSearchParam('');
       }
-    }catch(e){
-      console.log(e);
+    }catch(error){
+      console.log(error);
       setLoading(false);
       setSearchParam('');
     }
