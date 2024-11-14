@@ -18,7 +18,7 @@ const RecipeItem = ({item}) => {
           {item?.title}
         </h3>
         <Link
-          to={`/recipe-item/${item?.id}`}
+          to={`/receipe-item/${item?.id}`}
           className="text-sm p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white"
         >
           Recipe Details
